@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoCRUD';
+
+  constructor(private router:Router){
+
+  }
+
+  alta(){
+    this.router.navigate(['alta']);
+  }
+
+  modificar(){
+    this.router.navigate(['modificar']);
+  }
+
+  listado(){
+    this.router.navigate(['listado']);
+  }
 }
